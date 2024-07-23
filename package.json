@@ -1,0 +1,19 @@
+{
+  "name": "noonbot",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite-node src/main.ts",
+    "run": "vite-node src/main.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv-cli": "^7.4.2",
+    "node-fetch": "^3.3.2",
+    "vite-node": "^2.0.4"
+  }
+}
