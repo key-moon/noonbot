@@ -253,7 +253,9 @@ client.on("interactionCreate", async (interaction) => {
 
       let message = "Upcoming CTFs:\n";
       events.forEach((event: any) => {
-        message += `[${event.title}](${event.url}) from <t:${Math.floor(
+        message += `[${event.title}](${event.url})([ctftime](${
+          event.ctftime_url
+        })) from <t:${Math.floor(
           new Date(event.start).getTime() / 1000
         )}:F> to <t:${Math.floor(
           new Date(event.finish).getTime() / 1000
