@@ -240,7 +240,7 @@ client.on("interactionCreate", async (interaction) => {
         ephemeral: true,
       });
     } else if (commandName === "upcomings") {
-      const startsIn = (options.get("starts-in", true).value ?? 10) as number;
+      const startsIn = (options.get("starts-in")?.value ?? 10) as number;
 
       const limit = 100;
       const startTimestamp = Math.floor(Date.now() / 1000);
@@ -344,6 +344,7 @@ const commands = [
       option
         .setName("starts-in")
         .setDescription("Starts in N days (default: 10)")
+        .setRequired(false)
     ),
 ];
 
